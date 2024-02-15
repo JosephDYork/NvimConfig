@@ -3,10 +3,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     use('wbthomason/packer.nvim')
     use('nvim-lua/plenary.nvim')
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    use { 'nvim-telescope/telescope.nvim',
+        tag = '0.1.5',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
+    use('nvim-telescope/telescope-project.nvim')
 
     use {
         "kyazdani42/blue-moon",
@@ -29,6 +31,16 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-tree/nvim-web-devicons',
         },
+    }
+
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
     }
 
     use {

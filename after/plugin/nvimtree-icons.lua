@@ -1,4 +1,6 @@
-require 'nvim-web-devicons'.setup {
+local treeicons = require ('nvim-web-devicons')
+
+treeicons.setup {
     override = {
         zsh = {
             icon = "",
