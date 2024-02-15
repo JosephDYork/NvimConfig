@@ -1,0 +1,2 @@
+require("wheezy")
+print("Hello")
