@@ -1,2 +1,1 @@
 require("wheezy")
-print("Hello")

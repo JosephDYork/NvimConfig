@@ -1,2 +1,2 @@
 require("wheezy.remap")
-print("Hello from Joe")
+require("wheezy.set")
