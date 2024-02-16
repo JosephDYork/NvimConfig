@@ -1,7 +1,8 @@
+-- Initialize Package manager
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Initialize Package Managers and Package Pre-requisites
+    -- Initialize Package Pre-requisites
     use('wbthomason/packer.nvim')
     use('nvim-lua/plenary.nvim')
     use('williamboman/mason.nvim')
@@ -12,45 +13,49 @@ return require('packer').startup(function(use)
     use('L3MON4D3/LuaSnip')
     use('nvim-tree/nvim-web-devicons')
 
-    -- Initialize Blue Moon Colorscheme options
-    use {
-        "kyazdani42/blue-moon",
+    -- Initialize Blue Moon Colorscheme
+    use { "kyazdani42/blue-moon",
         config = function()
             vim.opt.termguicolors = true
             vim.cmd "colorscheme blue-moon"
         end
     }
 
-    -- Intialize Treesitter and Treesitter Extensions
-    use {
-        'nvim-treesitter/nvim-treesitter',
+    -- Intialize Treesitter for AST access
+    use { 'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
 
-    -- Initialize Harpoon Package and Extensions
-    use {
-        'ThePrimeagen/harpoon',
+    -- Initialize Harpoon for rapid buffer switching
+    use { 'ThePrimeagen/harpoon',
         branch = 'harpoon2'
     }
 
-    -- Initialize Telescope Packages and Extensions
+    -- Initialize Telescope and extensions for file search
     use { 'nvim-telescope/telescope.nvim',
         tag = '0.1.5'
     }
-    use('nvim-telescope/telescope-project.nvim')
 
     -- Initialize LSP-Zero for LSP Functionality
-    use {
-        'VonHeikemen/lsp-zero.nvim',
+    use { 'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
     }
 
-    -- Intialize Nvim-Tree Package and Extensions
-    use { 'nvim-tree/nvim-tree.lua' }
+    -- Initialize Alpha-Nvim for a dashboard popup
+    use('goolord/alpha-nvim')
 
-    -- Initialize Undotree Packages and Extensions
+    -- Initialize Telescope Project for project management
+    use('nvim-telescope/telescope-project.nvim')
+
+    -- Intialize Nvim-Tree Package for file manipulation
+    use('nvim-tree/nvim-tree.lua')
+
+    -- Initialize Undotree for robust undo/redo functionality
     use('mbbill/undotree')
 
-    -- Initialize Fugative Packages and Extensions
+    -- Initialize Fugitive for in-nvim Git functionality
     use('tpope/vim-fugitive')
+
+    -- Initialize Lualine for pretty status lines
+    use('nvim-lualine/lualine.nvim')
 end)
