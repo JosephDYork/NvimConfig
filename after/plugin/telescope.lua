@@ -18,7 +18,7 @@ telescope.setup {
                 '$USERPROFILE/source/repos',
             },
             hidden_files = true,
-            theme = "dropdown",
+            theme = "cursor",
             order_by = "asc",
             search_by = "title",
             sync_with_nvim_tree = true,

@@ -90,14 +90,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\joseph.york\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "C:\\Users\\joseph.york\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\dashboard-nvim",
-    url = "https://github.com/nvimdev/dashboard-nvim"
-  },
   harpoon = {
     loaded = true,
     path = "C:\\Users\\joseph.york\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
@@ -180,13 +172,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for blue-moon]], true)
 try_loadstring("\27LJ\2\n[\0\0\3\0\5\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0'\2\4\0B\0\2\1K\0\1\0\26colorscheme blue-moon\bcmd\18termguicolors\bopt\bvim\0", "config", "blue-moon")
 time([[Config for blue-moon]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
