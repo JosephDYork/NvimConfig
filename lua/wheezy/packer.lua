@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
     use('hrsh7th/cmp-nvim-lsp')
     use('L3MON4D3/LuaSnip')
     use('nvim-tree/nvim-web-devicons')
+    use 'lewis6991/gitsigns.nvim'
 
     -- Initialize Blue Moon Colorscheme
     use { "kyazdani42/blue-moon",
@@ -58,4 +59,7 @@ return require('packer').startup(function(use)
 
     -- Initialize Lualine for pretty status lines
     use('nvim-lualine/lualine.nvim')
+
+    -- Initialize Bufferline for pretty tab management
+    use{'akinsho/bufferline.nvim', tag = "*"}
 end)
