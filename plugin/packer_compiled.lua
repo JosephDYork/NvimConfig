@@ -84,16 +84,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\York.local\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["blue-moon"] = {
-    config = { "\27LJ\2\n[\0\0\3\0\5\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0'\2\4\0B\0\2\1K\0\1\0\26colorscheme blue-moon\bcmd\18termguicolors\bopt\bvim\0" },
-    loaded = true,
-    path = "C:\\Users\\York.local\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\blue-moon",
-    url = "https://github.com/kyazdani42/blue-moon"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\York.local\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "C:\\Users\\York.local\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -188,10 +187,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: blue-moon
-time([[Config for blue-moon]], true)
-try_loadstring("\27LJ\2\n[\0\0\3\0\5\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0'\2\4\0B\0\2\1K\0\1\0\26colorscheme blue-moon\bcmd\18termguicolors\bopt\bvim\0", "config", "blue-moon")
-time([[Config for blue-moon]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

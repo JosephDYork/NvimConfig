@@ -1,5 +1,6 @@
 require('lualine').setup {
-  options = {
-    theme = 'moonlight'
-  }
+    options = {
+        globalstatus = true,
+        theme = 'palenight'
+    },
 }

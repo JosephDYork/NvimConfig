@@ -26,6 +26,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+
 if vim.fn.has('win32') == 1 then
   vim.o.shell = 'powershell'
 else

@@ -15,12 +15,8 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     -- Initialize Blue Moon Colorscheme
-    use { "kyazdani42/blue-moon",
-        config = function()
-            vim.opt.termguicolors = true
-            vim.cmd "colorscheme blue-moon"
-        end
-    }
+    use { "catppuccin/nvim", as = "catppuccin" }
+    vim.cmd.colorscheme "catppuccin-macchiato"
 
     -- Intialize Treesitter for AST access
     use { 'nvim-treesitter/nvim-treesitter',
@@ -61,5 +57,5 @@ return require('packer').startup(function(use)
     use('nvim-lualine/lualine.nvim')
 
     -- Initialize Bufferline for pretty tab management
-    use{'akinsho/bufferline.nvim', tag = "*"}
+    use { 'akinsho/bufferline.nvim', tag = "*" }
 end)
