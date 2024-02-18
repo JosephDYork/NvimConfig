@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
 
     -- Initialize Blue Moon Colorscheme
     use { "catppuccin/nvim", as = "catppuccin" }
-    vim.cmd.colorscheme "catppuccin-macchiato"
 
     -- Intialize Treesitter for AST access
     use { 'nvim-treesitter/nvim-treesitter',
@@ -59,3 +58,5 @@ return require('packer').startup(function(use)
     -- Initialize Bufferline for pretty tab management
     use { 'akinsho/bufferline.nvim', tag = "*" }
 end)
+
+
